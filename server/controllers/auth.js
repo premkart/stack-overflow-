@@ -20,7 +20,7 @@ try{
     res.status(500).json("Something went wrong...")
 }
 }
-export const login = async (reg, res) =>{
+export const login = async (req, res) =>{
  const{ email, password }= req.body;
  try{
     const existinguser = await users.findOne({ email });
